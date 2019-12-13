@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ParkinGenie</string>
+    
+    <string-array name="CarParks">
+        <item>Parnell St</item>
+        <item>Ilac centre</item>
+        <item>Henry St</item>
+        <item>Pavilion</item>
+        <item>IFSC</item>
+        <item>SmithField</item>
+        <item>Swords Central</item>
+    </string-array>
+</resources>
