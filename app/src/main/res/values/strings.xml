@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ParkinGenie</string>
-    
+    <string name="reg">Register</string>
+
     <string-array name="CarParks">
         <item>Parnell St</item>
         <item>Ilac centre</item>
@@ -10,4 +11,13 @@
         <item>SmithField</item>
         <item>Swords Central</item>
     </string-array>
+
+    <string name="email">E-mail</string>
+    <string name="f_Name">First Name</string>
+    <string name="l_name">Last Name</string>
+    <string name="create_passwor">Create Password</string>
+    <string name="conf_pass">Confirm Password</string>
+    <string name="telephone">Telephone</string>
+    <string name="btn_cont">Continue</string>
+
 </resources>

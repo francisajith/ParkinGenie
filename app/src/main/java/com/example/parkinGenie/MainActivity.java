@@ -2,6 +2,7 @@ package com.example.parkinGenie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
     String myString = "Available Spaces and Info for ";
 
     @Override
@@ -25,9 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
+
         });
     }
 
+    //adding regbutton method
+    public void regbutton(View view){
+        Intent intent = new Intent(this,UserRegistration.class);
+        startActivity(intent);
+    }
 }
