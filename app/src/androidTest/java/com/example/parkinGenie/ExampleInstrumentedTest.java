@@ -1,4 +1,4 @@
-package com.example.splashscreenjpg;
+package com.example.parkinGenie;
 
 import android.content.Context;
 
