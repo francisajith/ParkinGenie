@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class UserRegistration extends AppCompatActivity {
 
 
-    private static int userId=10000;
+
 
     String role;
     EditText email, firstName, lastName, password, confirm, telephone;
@@ -40,7 +40,6 @@ public class UserRegistration extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                int userId_S = userId;
                 String email_S = email.getText().toString();
                 String firstName_S = firstName.getText().toString();
                 String lastName_S = lastName.getText().toString();
@@ -54,10 +53,9 @@ public class UserRegistration extends AppCompatActivity {
                     if(password_S.equals(confirm_S)){
                         Boolean checkEmail = user.checkEmail(email_S);
                         if(checkEmail){
-                            Boolean insert = user.insert(userId_S,firstName_S,lastName_S,email_S,password_S, telephone_S,role_S);
+                            Boolean insert = user.insert(firstName_S,lastName_S,email_S,password_S, telephone_S,role_S);
                             if(insert){
                                 Toast.makeText(getApplicationContext(), "Account Registered!", Toast.LENGTH_SHORT).show();
-                                userId++;
                             }
                         }
                         else{

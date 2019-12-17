@@ -16,7 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create table user(userId int primary key, firstName text, lastName text, email text, password text, telephone text, role text)");
+        db.execSQL("Create table user(userId INTEGER PRIMARY KEY AUTOINCREMENT, firstName text, lastName text, email text, password text, telephone text, role text)");
     }
 
     @Override
@@ -26,11 +26,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     //insert into database
-    public boolean insert(int userId, String firstName, String lastName, String email, String password, String telephone, String role){
+    public boolean insert(String firstName, String lastName, String email, String password, String telephone, String role){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put("userId",userId);
         contentValues.put("firstName",firstName);
         contentValues.put("lastName", lastName);
         contentValues.put("email",email);
@@ -51,7 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         else
             return true;
-        //}
+        }
 
         //to be used in future (at log in)
         //check if Password is correct
@@ -59,5 +58,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Cursor cursor = db.rawQuery("Select * from user where email=? and
         //       password=?", new String[]{Email, password}); if(cursor.getCount()>0) return true; else return false;
         //}
-    }
+
 }
